@@ -1,0 +1,31 @@
+name: bookly
+description: "A new Flutter project."
+publish_to: 'none'
+version: 0.1.0
+
+environment:
+  sdk: ^3.5.3
+
+dependencies:
+  carousel_slider: ^5.0.0
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.6
+  font_awesome_flutter: ^10.7.0
+  introduction_screen: ^3.1.14
+
+dev_dependencies:
+  flutter_lints: ^4.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: GT Sectra Fine
+      fonts:
+        - asset: assets/fonts/GT Sectra Fine Regular.ttf
