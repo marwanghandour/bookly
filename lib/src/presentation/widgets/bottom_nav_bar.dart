@@ -15,47 +15,29 @@ class BottomNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomAppBar(
-      height: 70,
+      elevation: 0,
       shape: const CircularNotchedRectangle(),
       color: AppColors.primaryBackground,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          IconButton(
-            icon: Icon(
-              AppIcons.home,
-              size: 25,
-              color: selectedIndex == 0 ? Colors.white : Colors.grey.shade500,
-            ),
-            onPressed: () => onItemTapped(0),
-          ),
-          IconButton(
-            icon: Icon(
-              AppIcons.search,
-              size: 25,
-              color: selectedIndex == 1 ? Colors.white : Colors.grey.shade500,
-            ),
-            onPressed: () => onItemTapped(1),
-          ),
-
-          IconButton(
-            icon: Icon(
-              AppIcons.category,
-              size: 25,
-              color: selectedIndex == 2 ? Colors.white : Colors.grey.shade500,
-            ),
-            onPressed: () => onItemTapped(2),
-          ),
-          IconButton(
-            icon: Icon(
-              AppIcons.profile,
-              size: 25,
-              color: selectedIndex == 3 ? Colors.white : Colors.grey.shade500,
-            ),
-            onPressed: () => onItemTapped(3),
-          ),
+          _buildIconButton(0, AppIcons.home ),
+          _buildIconButton(1, AppIcons.search),
+          _buildIconButton(2, AppIcons.category),
+          _buildIconButton(3, AppIcons.profile),
         ],
       ),
+    );
+  }
+
+  Widget _buildIconButton(int index, IconData icon) {
+    return IconButton(
+      icon: Icon(
+        icon,
+        size: 25,
+        color: selectedIndex == index ? Colors.white : Colors.grey.shade500,
+      ),
+      onPressed: () => onItemTapped(index),
     );
   }
 }

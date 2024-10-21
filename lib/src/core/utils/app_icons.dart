@@ -6,5 +6,8 @@ class AppIcons {
   static const IconData home = FontAwesomeIcons.house;
   static const IconData category = FontAwesomeIcons.layerGroup;
   static const IconData profile = FontAwesomeIcons.user;
+  static const IconData xsign = FontAwesomeIcons.xmark;
+  static const IconData cart = FontAwesomeIcons.cartPlus;
+
   
 }
