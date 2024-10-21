@@ -2,11 +2,11 @@ import 'package:bookly/src/core/utils/app_colors.dart';
 import 'package:bookly/src/core/utils/app_icons.dart';
 import 'package:bookly/src/presentation/widgets/book_rating.dart';
 import 'package:bookly/src/presentation/widgets/custom_button.dart';
+import 'package:bookly/src/presentation/widgets/you_may_also_like_widget.dart';
 import 'package:flutter/material.dart';
 
 
 class BookDetailPage extends StatelessWidget {
-
   const BookDetailPage({super.key,});
 
   @override
@@ -44,7 +44,7 @@ class BookDetailPage extends StatelessWidget {
              children: [
                CustomButton(
                 borderRadius: const BorderRadius.only(topLeft: Radius.circular(20), bottomLeft: const Radius.circular(20)),
-                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
+                padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 70),
                 text: '19.99',
                 color: Colors.white,
                 textColor: Colors.black,
@@ -52,7 +52,7 @@ class BookDetailPage extends StatelessWidget {
                  ),
                   CustomButton(
             borderRadius: const BorderRadius.only(topRight: Radius.circular(20), bottomRight: Radius.circular(20)),
-            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+            padding: const EdgeInsets.symmetric(vertical: 15, horizontal: 50),
             text: 'Free Preview',
             color: AppColors.buttonColor,
             textColor: Colors.black,
@@ -63,7 +63,9 @@ class BookDetailPage extends StatelessWidget {
 
               ],
             ),
-          )
+          ),
+          const SizedBox(height: 50,),
+        const YouMayAlsoLikeWidget(),
         ],
 
       ),
