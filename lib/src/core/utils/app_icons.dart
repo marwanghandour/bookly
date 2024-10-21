@@ -8,6 +8,8 @@ class AppIcons {
   static const IconData profile = FontAwesomeIcons.user;
   static const IconData xsign = FontAwesomeIcons.xmark;
   static const IconData cart = FontAwesomeIcons.cartPlus;
+  static const IconData star = Icons.star;
+
 
   
 }

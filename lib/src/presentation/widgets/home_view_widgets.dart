@@ -1,3 +1,4 @@
+import 'package:bookly/src/presentation/widgets/book_rating.dart';
 import 'package:bookly/src/presentation/widgets/dynamic_carousel.dart';
 import 'package:flutter/material.dart';
 import '../views/book_detail_view.dart';
@@ -71,6 +72,10 @@ class HomeViewWidgets extends StatelessWidget {
                           SizedBox(height: 20), 
                         ],
                       ),
+                    ),
+                    const Padding(
+                      padding: EdgeInsets.only(top: 30),
+                      child: BookRating(mainaxisalignment: MainAxisAlignment.end,),
                     ),
                   ],
                 ),

@@ -61,9 +61,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
                         ),
                       ),
                     ),
-                    const SizedBox(height: 50,),
-                    const CircularProgressIndicator(color: AppColors.buttonColor,),
-                    const SizedBox(height: 20),
+                      const SizedBox(height: 20),
                     const Text(
                       'Developed by Marwan',
                       style: TextStyle(
