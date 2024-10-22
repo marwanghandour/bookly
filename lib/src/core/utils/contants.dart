@@ -39,7 +39,8 @@ class Constants {
                       borderRadius: BorderRadius.circular(10.0),
                     ),
                   ),
-                  child: const Text('OK', style: TextStyle(color: Colors.white)),
+                  child:
+                      const Text('OK', style: TextStyle(color: Colors.white)),
                   onPressed: () {
                     Navigator.of(context).pop(); // Close the dialog
                   },
@@ -53,7 +54,8 @@ class Constants {
   }
 
   //snackbar
-  static void showSnackbar(BuildContext context, String message, {Color? color}) {
+  static void showSnackbar(BuildContext context, String message,
+      {Color? color}) {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         backgroundColor: color ?? Colors.red,
@@ -62,7 +64,6 @@ class Constants {
       ),
     );
   }
-
 
   // Method to show a loading dialog
   static Future<void> showLoadingDialog(BuildContext context) {

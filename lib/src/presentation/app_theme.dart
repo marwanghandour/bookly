@@ -8,7 +8,6 @@ ThemeData appTheme() {
     scaffoldBackgroundColor: AppColors.primaryBackground,
     brightness: Brightness.dark,
     fontFamily: AppStrings.fontFamily,
-    
 
     // Text Theme
     textTheme: const TextTheme(
@@ -46,14 +45,13 @@ ThemeData appTheme() {
       focusedBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(8),
       ),
-      labelStyle: const TextStyle(color: AppColors.textColor), // Define labelColor
+      labelStyle:
+          const TextStyle(color: AppColors.textColor), // Define labelColor
     ),
 
     // Icon Theme
     iconTheme: const IconThemeData(
       color: AppColors.textColor, // Define iconColor in AppColors
     ),
-
-
   );
 }

@@ -10,12 +10,13 @@ class SearchPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.primaryBackground,
-       title: const Text('Search Books', style: const TextStyle(fontWeight: FontWeight.bold),),
-  
+        title: const Text(
+          'Search Books',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
       ),
       body: const SearchWidget(
         hintText: 'Search',
-      
       ),
     );
   }

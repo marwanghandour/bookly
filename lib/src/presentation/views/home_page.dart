@@ -16,10 +16,13 @@ class HomePage extends StatelessWidget {
           logoUrl: AppStrings.appLogo,
           actions: <Widget>[
             IconButton(
-              onPressed: (){
-                Navigator.pushNamed(context, AppRoutes.search);
-              }, 
-            icon: const Icon(AppIcons.search, size: 25,)),
+                onPressed: () {
+                  Navigator.pushNamed(context, AppRoutes.search);
+                },
+                icon: const Icon(
+                  AppIcons.search,
+                  size: 25,
+                )),
           ],
         ),
         body: const Padding(

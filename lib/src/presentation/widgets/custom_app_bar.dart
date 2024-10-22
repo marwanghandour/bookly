@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  final String? logoUrl; 
+  final String? logoUrl;
   final List<Widget>? actions;
 
   const CustomAppBar({
@@ -19,15 +19,14 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: Row(
         children: [
-          if (logoUrl != null) 
+          if (logoUrl != null)
             Padding(
               padding: const EdgeInsets.only(right: 8.0),
-              child: Image.asset( 
+              child: Image.asset(
                 AppStrings.appLogo,
-                height: 25, 
+                height: 25,
               ),
             ),
-        
         ],
       ),
       actions: actions,

@@ -12,7 +12,8 @@ class Splashscreen extends StatefulWidget {
   State<Splashscreen> createState() => _SplashscreenState();
 }
 
-class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderStateMixin {
+class _SplashscreenState extends State<Splashscreen>
+    with SingleTickerProviderStateMixin {
   late SplashscreenCubit _splashscreenCubit;
 
   @override
@@ -61,7 +62,7 @@ class _SplashscreenState extends State<Splashscreen> with SingleTickerProviderSt
                         ),
                       ),
                     ),
-                      const SizedBox(height: 20),
+                    const SizedBox(height: 20),
                     const Text(
                       'Developed by Marwan',
                       style: TextStyle(

@@ -12,14 +12,13 @@ class BooksCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        
-        Navigator.push(context, MaterialPageRoute(builder: (context) => const BookDetailPage()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const BookDetailPage()));
       },
       child: Container(
         decoration: BoxDecoration(
           color: AppColors.primaryBackground,
           borderRadius: BorderRadius.circular(40),
-      
         ),
         child: Column(
           children: [
@@ -28,11 +27,10 @@ class BooksCard extends StatelessWidget {
                 borderRadius: BorderRadius.circular(10),
                 child: Image.asset(
                   book.image,
-                  fit: BoxFit.cover, 
+                  fit: BoxFit.cover,
                 ),
               ),
             ),
-          
           ],
         ),
       ),

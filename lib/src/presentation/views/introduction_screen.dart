@@ -19,26 +19,26 @@ class IntroductionScreens extends StatelessWidget {
       next: const Icon(Icons.navigate_next, color: Colors.white),
       showBackButton: false,
       showSkipButton: true,
-      skip: const Text('Skip',),
+      skip: const Text(
+        'Skip',
+      ),
       onSkip: () {
         Navigator.pushNamedAndRemoveUntil(
-    context,
-    AppRoutes.home,
-    (Route<dynamic> route) => false,
-  );
-
+          context,
+          AppRoutes.home,
+          (Route<dynamic> route) => false,
+        );
       },
-    
-
-     onDone: () {
-      Navigator.pushNamedAndRemoveUntil(
-    context,
-    AppRoutes.home,
-    (Route<dynamic> route) => false,
-  );
-},
-
-      done: const Text("Done",),
+      onDone: () {
+        Navigator.pushNamedAndRemoveUntil(
+          context,
+          AppRoutes.home,
+          (Route<dynamic> route) => false,
+        );
+      },
+      done: const Text(
+        "Done",
+      ),
       pages: _buildPages(),
       nextStyle: _buttonStyle(),
       doneStyle: _buttonStyle(),
@@ -62,37 +62,34 @@ class IntroductionScreens extends StatelessWidget {
 
   List<PageViewModel> _buildPages() {
     return [
-     _buildPageViewModel(
-
+      _buildPageViewModel(
         title: 'Welcome to Bookly',
-        body: 'Discover a world of books at your fingertips. Dive into your next read with our extensive collection.',
-       image: 'assets/images/Dictionary-pana.png', 
-
+        body:
+            'Discover a world of books at your fingertips. Dive into your next read with our extensive collection.',
+        image: 'assets/images/Dictionary-pana.png',
       ),
       _buildPageViewModel(
-        
         title: 'Browse by Category',
-        body: 'Explore a variety of genres and categories to find books that match your interests, from fiction to non-fiction.',
-        image: 'assets/images/Man reading-pana.png', 
-
-      ),
-      _buildPageViewModel(  
-      
-        title: 'Bookmark Your Favorites',
-        body: 'Easily bookmark your favorite books and keep track of what you want to read next.',
-        image: 'assets/images/Reading glasses-pana.png', 
-
+        body:
+            'Explore a variety of genres and categories to find books that match your interests, from fiction to non-fiction.',
+        image: 'assets/images/Man reading-pana.png',
       ),
       _buildPageViewModel(
-        
+        title: 'Bookmark Your Favorites',
+        body:
+            'Easily bookmark your favorite books and keep track of what you want to read next.',
+        image: 'assets/images/Reading glasses-pana.png',
+      ),
+      _buildPageViewModel(
         title: 'Get Started!',
-        body: 'Ready to dive into your next book? Click below to start your reading journey with Bookly.',
-        image: 'assets/images/Thesis-pana.png', 
+        body:
+            'Ready to dive into your next book? Click below to start your reading journey with Bookly.',
+        image: 'assets/images/Thesis-pana.png',
       ),
     ];
   }
 
-   PageViewModel _buildPageViewModel({
+  PageViewModel _buildPageViewModel({
     String? title,
     required String body,
     required String image,
@@ -103,7 +100,7 @@ class IntroductionScreens extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Center(
-            child: Image.asset(image, width: 350), 
+            child: Image.asset(image, width: 350),
           ),
           const SizedBox(height: 20),
           Text(

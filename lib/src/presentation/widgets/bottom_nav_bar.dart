@@ -21,7 +21,7 @@ class BottomNavBar extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          _buildIconButton(0, AppIcons.home ),
+          _buildIconButton(0, AppIcons.home),
           _buildIconButton(1, AppIcons.search),
           _buildIconButton(2, AppIcons.category),
           _buildIconButton(3, AppIcons.profile),

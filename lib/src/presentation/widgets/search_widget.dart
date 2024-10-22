@@ -25,14 +25,12 @@ class SearchWidget extends StatelessWidget {
               color: Colors.grey.withOpacity(0.3),
               spreadRadius: 1,
               blurRadius: 5,
-              offset: const Offset(0, 3), 
+              offset: const Offset(0, 3),
             ),
           ],
         ),
         child: TextField(
-          style: const TextStyle(
-            color: Colors.black
-          ),
+          style: const TextStyle(color: Colors.black),
           cursorColor: Colors.black,
           controller: controller,
           onChanged: onSearch,
@@ -42,7 +40,8 @@ class SearchWidget extends StatelessWidget {
               color: Colors.black,
             ),
             border: InputBorder.none,
-            contentPadding: const EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
+            contentPadding:
+                const EdgeInsets.symmetric(vertical: 15.0, horizontal: 30.0),
           ),
         ),
       ),
