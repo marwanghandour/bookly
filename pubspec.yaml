@@ -8,12 +8,16 @@ environment:
 
 dependencies:
   carousel_slider: ^5.0.0
+  dartz: ^0.10.1
+  dio: ^5.7.0
   equatable: ^2.0.5
   flutter:
     sdk: flutter
   flutter_bloc: ^8.1.6
   font_awesome_flutter: ^10.7.0
+  http: ^1.2.2
   introduction_screen: ^3.1.14
+  skeletonizer: ^1.4.2
 
 dev_dependencies:
   flutter_lints: ^4.0.0

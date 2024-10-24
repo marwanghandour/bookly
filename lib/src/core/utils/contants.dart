@@ -1,3 +1,4 @@
+import 'package:bookly/src/core/utils/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class Constants {
@@ -72,7 +73,9 @@ class Constants {
       barrierDismissible: false, // Prevents closing by tapping outside
       builder: (BuildContext context) {
         return const Center(
-          child: CircularProgressIndicator(),
+          child: CircularProgressIndicator(
+            color: AppColors.buttonColor,
+          ),
         );
       },
     );

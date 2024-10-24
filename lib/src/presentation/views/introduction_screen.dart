@@ -106,7 +106,7 @@ class IntroductionScreens extends StatelessWidget {
           Text(
             body,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 16),
+            style: const TextStyle(fontSize: 25, fontWeight: FontWeight.w700),
           ),
         ],
       ),
