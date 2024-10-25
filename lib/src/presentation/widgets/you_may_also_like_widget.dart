@@ -1,3 +1,6 @@
+import 'package:bookly/src/core/utils/app_strings.dart';
+import 'package:bookly/src/core/utils/navigation_helper.dart';
+import 'package:bookly/src/presentation/views/book_detail_view.dart';
 import 'package:flutter/material.dart';
 
 class YouMayAlsoLikeWidget extends StatelessWidget {
@@ -24,10 +27,18 @@ class YouMayAlsoLikeWidget extends StatelessWidget {
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                return Image.asset(
-                  'assets/images/test_image.png',
-                  fit: BoxFit.cover,
-                  height: 120,
+                return GestureDetector(
+                  onTap: () {
+                    
+                    Navigator.push(context, 
+                    NavigationHelper.createSlideRoute(const BookDetailPage())
+                    );
+                  },
+                  child: Image.asset(
+                    AppStrings.testImage,
+                    fit: BoxFit.cover,
+                    height: 100,
+                  ),
                 );
               },
             ),

@@ -1,3 +1,4 @@
+import 'package:bookly/src/core/utils/app_strings.dart';
 import 'package:dio/dio.dart';
 
 abstract class Failure {
@@ -12,27 +13,27 @@ class ServerFailure extends Failure {
   factory ServerFailure.fromDioError(DioException dioError) {
     switch (dioError.type) {
       case DioExceptionType.connectionTimeout:
-        return ServerFailure('Connection timeout with ApiServer');
+        return ServerFailure(AppStrings.connectionTimeout);
 
       case DioExceptionType.sendTimeout:
-        return ServerFailure('Send timeout with ApiServer');
+        return ServerFailure(AppStrings.sendTimeout);
 
       case DioExceptionType.receiveTimeout:
-        return ServerFailure('Receive timeout with ApiServer');
+        return ServerFailure(AppStrings.receiveTimeout);
 
       case DioExceptionType.badResponse:
         return ServerFailure.fromResponse(
             dioError.response!.statusCode, dioError.response!.data);
       case DioExceptionType.cancel:
-        return ServerFailure('Request to ApiServer was canceld');
+        return ServerFailure(AppStrings.apiCancel);
 
       case DioExceptionType.unknown:
         if (dioError.message!.contains('SocketException')) {
-          return ServerFailure('No Internet Connection');
+          return ServerFailure(AppStrings.noIntenetConnection);
         }
-        return ServerFailure('Unexpected Error, Please try again!');
+        return ServerFailure(AppStrings.error);
       default:
-        return ServerFailure('Opps There was an Error, Please try again');
+        return ServerFailure(AppStrings.error);
     }
   }
 

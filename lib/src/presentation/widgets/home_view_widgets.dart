@@ -1,4 +1,5 @@
 import 'package:bookly/src/core/utils/app_strings.dart';
+import 'package:bookly/src/core/utils/navigation_helper.dart';
 import 'package:bookly/src/presentation/views/book_detail_view.dart';
 import 'package:bookly/src/presentation/widgets/book_rating.dart';
 import 'package:bookly/src/presentation/widgets/dynamic_carousel.dart';
@@ -44,9 +45,7 @@ class HomeViewWidgets extends StatelessWidget {
       onTap: () {
         Navigator.push(
           context,
-          MaterialPageRoute(
-            builder: (context) => const BookDetailPage(),
-          ),
+       NavigationHelper.createSlideFromBottomRoute(const BookDetailPage()),
         );
       },
       child: Padding(
@@ -60,7 +59,7 @@ class HomeViewWidgets extends StatelessWidget {
                 Image.asset(
                   AppStrings.testImage,
                   fit: BoxFit.cover,
-                  height: 150,
+                  height: 160,
                   errorBuilder: (context, error, stackTrace) {
                     return const Icon(Icons.error);
                   },
@@ -70,10 +69,17 @@ class HomeViewWidgets extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text('The Jungle Book', style: TextStyle(fontSize: 20)),
+                      Text('The Jungle Book', 
+                      style: 
+                      TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w600
+                        )
+                        ),
+                        SizedBox(height: 4,),
                       Text('J.k Rowling'),
-                      Text('', style: TextStyle(fontSize: 14)),
-                      SizedBox(height: 20),
+                      Text('', style: TextStyle(fontSize: 15)),
+                      SizedBox(height: 40),
                     ],
                   ),
                 ),
