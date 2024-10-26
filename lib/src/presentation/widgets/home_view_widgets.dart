@@ -1,6 +1,7 @@
 import 'package:bookly/src/core/utils/app_strings.dart';
 import 'package:bookly/src/core/utils/navigation_helper.dart';
 import 'package:bookly/src/presentation/views/book_detail_view.dart';
+import 'package:bookly/src/presentation/widgets/best_sellers.dart';
 import 'package:bookly/src/presentation/widgets/book_rating.dart';
 import 'package:bookly/src/presentation/widgets/dynamic_carousel.dart';
 import 'package:flutter/material.dart';
@@ -29,7 +30,7 @@ class HomeViewWidgets extends StatelessWidget {
         child: Text(
           'Best Sellers',
           style: TextStyle(
-            fontSize: 20,
+            fontSize: 22,
             fontWeight: FontWeight.bold,
           ),
         ),
@@ -37,68 +38,9 @@ class HomeViewWidgets extends StatelessWidget {
     );
   }
 
-  SliverList _buildBestSellersContent() {
-    return SliverList(
-      delegate: SliverChildBuilderDelegate(
-        (context, index) {
-          return GestureDetector(
-      onTap: () {
-        Navigator.push(
-          context,
-       NavigationHelper.createSlideFromBottomRoute(const BookDetailPage()),
-        );
-      },
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 20),
-            Row(
-              children: [
-                Image.asset(
-                  AppStrings.testImage,
-                  fit: BoxFit.cover,
-                  height: 160,
-                  errorBuilder: (context, error, stackTrace) {
-                    return const Icon(Icons.error);
-                  },
-                ),
-                const SizedBox(width: 10),
-                const Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('The Jungle Book', 
-                      style: 
-                      TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.w600
-                        )
-                        ),
-                        SizedBox(height: 4,),
-                      Text('J.k Rowling'),
-                      Text('', style: TextStyle(fontSize: 15)),
-                      SizedBox(height: 40),
-                    ],
-                  ),
-                ),
-                const Padding(
-                  padding: EdgeInsets.only(top: 30),
-                  child: BookRating(
-                    mainaxisalignment: MainAxisAlignment.end,
-                  ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 20),
-          ],
-        ),
-      ),
-    );
-        },
-        childCount: 10,
-      ),
-    );
-  }
-}
+  SliverToBoxAdapter _buildBestSellersContent() {
+    return const SliverToBoxAdapter(
+          child: BestSellers(),
+      );
+      
+  }}
