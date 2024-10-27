@@ -1,6 +1,6 @@
 import 'package:bookly/src/core/utils/navigation_helper.dart';
 import 'package:bookly/src/presentation/views/book_detail_view.dart';
-import 'package:bookly/src/presentation/widgets/book_list_view.dart';
+import 'package:bookly/src/presentation/widgets/components/book_list_view.dart';
 import 'package:flutter/material.dart';
 
 class BestSellers extends StatelessWidget {
@@ -15,15 +15,15 @@ class BestSellers extends StatelessWidget {
        NavigationHelper.createSlideFromBottomRoute(const BookDetailPage()),
         );
       },
-      child: Column(
+      child: const Column(
         children: [
-          const BookListView(),
-                    const BookListView(),
+          BookListView(),
+                    BookListView(),
 
-          const BookListView(),
-          const BookListView(),
-          const BookListView(),
-          const BookListView(),
+          BookListView(),
+          BookListView(),
+          BookListView(),
+          BookListView(),
 
         ],
       ),

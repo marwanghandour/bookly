@@ -1,9 +1,10 @@
 import 'package:bookly/src/core/utils/app_icons.dart';
 import 'package:bookly/src/core/utils/app_strings.dart';
 import 'package:bookly/src/presentation/app_routes.dart';
-import 'package:bookly/src/presentation/widgets/custom_app_bar.dart';
+import 'package:bookly/src/presentation/widgets/main_widgets/home_view_widgets.dart';
+import 'package:bookly/src/presentation/widgets/navigation/custom_app_bar.dart';
 import 'package:flutter/material.dart';
-import '../widgets/home_view_widgets.dart';
+
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

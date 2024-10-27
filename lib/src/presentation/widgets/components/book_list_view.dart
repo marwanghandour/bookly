@@ -1,5 +1,5 @@
 import 'package:bookly/src/core/utils/app_strings.dart';
-import 'package:bookly/src/presentation/widgets/book_rating.dart';
+import 'package:bookly/src/presentation/widgets/components/book_rating.dart';
 import 'package:flutter/material.dart';
 
 class BookListView extends StatelessWidget {

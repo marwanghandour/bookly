@@ -1,5 +1,5 @@
 import 'package:bookly/src/core/utils/app_colors.dart';
-import 'package:bookly/src/presentation/widgets/search_widget.dart';
+import 'package:bookly/src/presentation/widgets/main_widgets/search_widget.dart';
 import 'package:flutter/material.dart';
 
 class SearchPage extends StatelessWidget {

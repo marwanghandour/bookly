@@ -1,10 +1,6 @@
-import 'package:bookly/src/core/utils/app_strings.dart';
-import 'package:bookly/src/core/utils/navigation_helper.dart';
-import 'package:bookly/src/presentation/views/book_detail_view.dart';
-import 'package:bookly/src/presentation/widgets/best_sellers.dart';
-import 'package:bookly/src/presentation/widgets/book_rating.dart';
-import 'package:bookly/src/presentation/widgets/dynamic_carousel.dart';
+import 'package:bookly/src/presentation/widgets/components/best_sellers.dart';
 import 'package:flutter/material.dart';
+import '../components/dynamic_carousel.dart';
 
 class HomeViewWidgets extends StatelessWidget {
   const HomeViewWidgets({

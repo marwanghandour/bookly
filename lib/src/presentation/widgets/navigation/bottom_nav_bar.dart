@@ -1,6 +1,7 @@
 import 'package:bookly/src/core/utils/app_icons.dart';
 import 'package:flutter/material.dart';
-import '../../core/utils/app_colors.dart';
+
+import '../../../core/utils/app_colors.dart';
 
 class BottomNavBar extends StatelessWidget {
   final int selectedIndex;

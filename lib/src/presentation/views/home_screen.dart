@@ -1,5 +1,5 @@
+import 'package:bookly/src/presentation/widgets/navigation/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
-import '../widgets/bottom_nav_bar.dart';
 import 'categories_page.dart';
 import 'home_page.dart';
 import 'profile_page.dart';

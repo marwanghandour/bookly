@@ -3,7 +3,7 @@ import 'package:bookly/src/core/utils/app_strings.dart';
 import 'package:bookly/src/core/utils/contants.dart';
 import 'package:bookly/src/core/utils/navigation_helper.dart';
 import 'package:bookly/src/presentation/views/sign_up_view.dart';
-import 'package:bookly/src/presentation/widgets/custom_text_field.dart';
+import 'package:bookly/src/presentation/widgets/components/custom_text_field.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
